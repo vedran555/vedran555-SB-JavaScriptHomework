@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="username">
+    <span matTooltip="Back to tasks" matTooltipShowDelay="100">
+      <button class="btn btn-primary btn-sm back" [routerLink]="['/tasks']"
+        queryParamsHandling="preserve">
+          <i class="material-icons">arrow_back</i>
+      </button>
+    </span>
+    <div class="user">
+      <app-user></app-user>
+    </div>
+  </div>
+
+  <div *ngIf="!taskFetched" style="margin-top:40px">
+    Getting task information ...
+  </div>
+
+  <div class="task" *ngIf="taskFetched">
+    <div matTooltip="Task name" matTooltipShowDelay="100" class="task-name"matTooltipPosition="above">
+      <span>{{task?.name}}</span>
+    </div>
+    
+    <div class="task-table">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="first-column">status:</td>
+            <td class="task-status">
+              <span [ngStyle]="statusStyles[task.status]">{{task.status}}</span>
+              <!-- [ngStyle]="statusStyles[task.status]" sets style of text, based on task status -->
+            </td>
+          </tr>
+          <tr>
+            <td class="first-column">project:</td>
+            <td class="task-project">{{task.project}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

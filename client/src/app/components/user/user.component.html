@@ -1,0 +1,13 @@
+<div class="wrapper">
+  <div class="user" *ngIf="username==undefined">
+    loading...
+  </div>
+  <div class="user" *ngIf="username!=undefined">
+    <span matTooltip="logged as {{username}}" matTooltipShowDelay="100">
+      <i class="material-icons">person</i> {{username}}
+    </span>
+  </div>
+  <span matTooltip="Want to logout?" matTooltipShowDelay="100">
+    <button class="btn btn-danger btn-sm" (click)="clearStorage()">logout</button>
+  </span>
+</div>

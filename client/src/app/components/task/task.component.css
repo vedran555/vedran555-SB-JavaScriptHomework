@@ -1,0 +1,74 @@
+:host {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(236, 236, 247);
+}
+
+.container {
+    margin-top: 15px;
+}
+
+.username {
+    display: flex;
+    height: 30px;
+    line-height: 30px;
+}
+
+.user {
+    display:flex;
+    justify-content:flex-end;
+    flex-grow:1;
+}
+
+.username > span > button > i {
+    font-size: 20px;
+}
+
+.back { 
+    /* to center arrow inside button */
+    display: flex;
+    margin: auto;
+    margin-top: 2px;
+}
+
+.task {
+    margin-top: 50px;
+}
+
+.task-name {
+    background-color: whitesmoke;
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.task-table {
+    margin-top: 30px;
+}
+
+tr:hover {
+    background-color: whitesmoke;
+}
+
+.first-column {
+    width: 75px;
+    font-weight: 500;
+}
+
+.task-project {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.task-status {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.task-status > span {
+    padding: 3px 20px;
+    border-radius: 10px;
+}

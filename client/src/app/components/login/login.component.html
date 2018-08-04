@@ -1,0 +1,14 @@
+<div class="login" *ngIf="!loading">
+  <div class="message" *ngIf="message!==''">
+    {{message}}
+  </div>
+  <div class="inputDiv">
+    <div id="enter-token">Enter token:</div>
+    <input type="text" (input)="inputToken=$event.target.value" [value]="inputToken" size="35" autocomplete="off">
+    <button class="btn btn-success" (click)="check()">Go</button>
+  </div>
+</div>
+
+<div *ngIf="loading">
+  Loading, please wait...
+</div>

@@ -1,0 +1,21 @@
+.wrapper {
+    display: flex;
+}
+
+div {
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.user {
+    font-weight: 600;
+}
+
+.user > span > i {
+    vertical-align: middle;
+}
+
+button {
+    font-size: 13px;
+    font-weight: 400;
+}

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="username">
+    <app-user></app-user>
+  </div>
+  
+
+  <div class="filters">
+    <div class="status">
+      <span matTooltip="filter by status" matTooltipShowDelay="100">
+        <span>Status:</span>
+        <select (change)="onStatusChange($event.target.value)" style="width:120px">
+          <option *ngFor="let stat of statuses" [selected]="status == stat">{{stat}}</option>
+        </select>
+      </span>
+    </div>
+    
+    <div class="limit">
+      <span matTooltip="set limit" matTooltipShowDelay="100">
+        <span>Limit:</span>
+        <select (change)="onLimitChange($event.target.value)" style="width:45px">
+          <option *ngFor="let lim of limits" [selected]="limit == lim">{{lim}}</option>
+        </select>
+      </span>
+    </div>
+    
+  </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Task name</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="tasksLoaded==true && tasks!=''">
+        <tr *ngFor="let task of tasks">
+          <td class="task">
+            <span matTooltip="View task: {{task.name}}" matTooltipShowDelay="200"
+            matTooltipPosition="right">
+              <a [routerLink]="['/task', task.id]" [queryParams]="{ status: status, limit: limit }">
+                {{task.name}}
+              </a>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="tasks=='' && tasksLoaded==true">
+        <tr>
+          <td>Your filter returned no matches.</td>
+        </tr>
+      </tbody>
+      <tbody *ngIf="tasksLoaded==false">
+        <tr>
+          <td>Getting tasks...</td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,62 @@
+:host {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: rgb(236, 236, 247);
+}
+
+.container {
+    margin-top: 15px;
+}
+
+.username {
+    display: flex;
+    justify-content: flex-end;
+    height: 40px;
+    line-height: 40px;
+}
+
+select:hover {
+    cursor: pointer;
+}
+
+.table {
+    width: 50%;
+}
+
+.filters {
+    display: flex;
+    background-color: rgb(188, 188, 243);
+    width: 50%;
+    margin: 20px 0 20px 0;
+    border-radius: 3px;
+    padding: 8px 15px 8px 15px;
+}
+
+.filters > div > span >span {
+    margin-right: 5px;
+    color: white;
+    font-weight: 500;
+}
+
+.filters > .status {
+    margin-right: 30px;
+    background-color:rgb(154, 73, 230);
+    padding:5px;
+    border-radius: 3px;
+}
+
+.filters > .limit {
+    background-color:rgb(154, 73, 230);
+    padding:5px;
+    border-radius: 3px;
+}
+
+.task:hover {
+    background-color: rgb(252, 250, 250);
+    border-radius: 2px;
+}
+
+.task a {
+    font-weight: 500;
+}

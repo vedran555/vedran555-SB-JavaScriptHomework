@@ -1,0 +1,38 @@
+:host {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(236, 236, 247);
+}
+
+.login {
+    background-color: white;
+    padding: 10px;
+    border: 2px solid rgb(25, 0, 255);
+    border-radius: 5px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inputDiv * {
+    margin-bottom: 10px;
+}
+
+.message {
+    display: flex;
+    justify-content: center;
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#enter-token {
+    font-weight: 500;
+}
